@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import Signup from './Signup';
 import SignupComponent from './Signup';
+import SigninComponent from './Signin'
 
 const SignupPath = '/signup';
+const SigninPath = '/signin';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <Redirect to='/signup' />
       </Route>
 
-      <Route path={SignupPath} component={SignupComponent}></Route> 
+      <Route path={SignupPath} component={SignupComponent}></Route>
+      <Route path={SigninPath} component={SigninComponent}></Route>
     </Router>
   );
 }

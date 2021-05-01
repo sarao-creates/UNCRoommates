@@ -19,7 +19,39 @@
 }
 
 
+.nameInput {
+    width: 100%;
+}
 
-.pwdInput {
+.firstNameInput {
+    width: 49%;
+    margin-right: 10px;
+
+}
+
+.lastNameInput {
+    width: 49%;
+}
+
+
+.input {
     margin-top: 10px;
+}
+
+.inlineInput {
+    display: inline-block;
+}
+
+.instagramInput {
+    width: 32%;
+    margin-right: 10px;
+}
+
+.twitterInput {
+    width: 32%;
+    margin-right: 10px;
+}
+
+.tiktokInput {
+    width: 32%;
 }
