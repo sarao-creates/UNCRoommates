@@ -3,6 +3,7 @@ import {Alert} from '@material-ui/lab'
 import { auth, db } from '../Firebase/firebase';
 import { useState } from 'react';
 import './index.css'
+import {useHistory} from 'react-router-dom'
 
 function Signin() {
 
@@ -12,6 +13,7 @@ function Signin() {
         status: false,
         message: '',
     });
+    const history = useHistory();
 
     const handlePWD = (event) => {
         setPWD(event.target.value);
@@ -21,13 +23,12 @@ function Signin() {
         setEmail(event.target.value);
     }
     
-    const handleSignup = () => {
-
-        auth.createUserWithEmailAndPassword(email, pwd).then(userCred => {
-            return db.collection('users').doc(userCred.user.uid).set({
-                email: email,
-            })
-            
+    const handleSignIn = () => {
+        
+        auth.signInWithEmailAndPassword(email, pwd).then(userCred => {
+            console.log('Sign in successful');
+            history.push('/home');
+                      
         }).catch((error) => {
             let errorCode = error.code;
             let errorMessage = error.message;
@@ -77,7 +78,7 @@ function Signin() {
                     
                     <br></br>
                     <div className='signin-button'>
-                        <Button variant='contained' color='primary' onClick={handleSignup}>Signin</Button>
+                        <Button variant='contained' color='primary' onClick={handleSignIn}>Signin</Button>
                     </div>
                     <div className='reset-password'>
                         <Button variant='contained' color='secondary' onClick={handlePWDReset}>Reset Password</Button>

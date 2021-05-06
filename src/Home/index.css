@@ -1,0 +1,49 @@
+.feed {
+    margin: 50px auto;
+    width: 600px;
+}
+
+.main {
+    width: 100%;
+    
+}
+
+.modal-style {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    top: 30%;
+    left: 30%;
+
+}
+
+.modal-label {
+    margin-left: 20px;
+}
+
+.modal-title {
+    margin-left: 20px;
+    width: 90%;
+}
+
+.modal-body {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+
+}
+.modal-footer {
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.cancel-button {
+    display: inline-block;
+}
+
+.submit-button {
+    display: inline-block;
+    margin-left: 15px;
+}

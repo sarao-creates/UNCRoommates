@@ -1,0 +1,21 @@
+.post-main {
+    margin-top: 30px;
+}
+
+.roommate-request {
+    float: right;
+}
+.author {
+    display: inline-block;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+.top-level {
+    width: 100%;
+}
+
+.body {
+    font-size: 17px;
+}
+

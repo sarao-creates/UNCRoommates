@@ -3,10 +3,10 @@ import {Alert} from '@material-ui/lab'
 import { auth, db } from '../Firebase/firebase';
 import { useState } from 'react';
 import './index.css';
-import {Link} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 
 function Signup() {
-
+    const history = useHistory();
     const [userInfo, setUserInfo] = useState({
         email: '',
         firstName: '',
@@ -14,6 +14,8 @@ function Signup() {
         instagram: '',
         twitter: '',
         tiktok: '',
+        group: '',
+        requests: [],
     })
     const [pwd, setPWD] = useState('');
     const [snackbar, setSnackbar] = useState({
@@ -23,7 +25,6 @@ function Signup() {
 
     const handleInfo = (prop) => (event) => {
         setUserInfo({...userInfo, [prop]: event.target.value});
-        console.log(userInfo);
     }
 
     const handlePWD = (event) => {
@@ -33,6 +34,7 @@ function Signup() {
     const handleSignup = () => {
 
         auth.createUserWithEmailAndPassword(userInfo.email, pwd).then(userCred => {
+            history.push('/home');
             return db.collection('users').doc(userCred.user.uid).set(userInfo);
             
         }).catch((error) => {
@@ -51,7 +53,6 @@ function Signup() {
         <div className='signup-main'>
             <div className='signup-conainer'>
                 <h1 className='title-text'>UNC Roommates</h1>
-
                 <form>
                     <div className='form-size'>
                         <div className='nameInput input'>
