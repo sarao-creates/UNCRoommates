@@ -19,7 +19,7 @@ function Map(props) {
 
 
     ]
-    const coordinates = props.coordinates;
+    // const coordinates = props.coordinates;
     // const pan = props.pan;
     const {ref, map, google} = useGoogleMaps(
         process.env.REACT_APP_GOOGLE_API_KEY,
@@ -31,7 +31,6 @@ function Map(props) {
 
 
     useEffect(() => {
-        console.log(props.coordinates);
         if (!map || !google) return;
         
         for (let i = 0; i < housingCoords.length; i++) {
@@ -44,7 +43,7 @@ function Map(props) {
         }
         
         
-    }, [map, google, coordinates, props.coordinates])
+    })
 
     // useEffect(() => {
     //     map.panTo(pan.getPosition().toJSON());

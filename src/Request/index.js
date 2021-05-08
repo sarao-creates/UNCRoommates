@@ -12,7 +12,7 @@ function Request(props) {
                 setUser(doc.data().firstName + ' ' + doc.data().lastName);
             }
         })
-    }, []) 
+    }, [props.rid]) 
 
     const handleAccept = async () => {
         let cgroup = false;

@@ -29,7 +29,7 @@ function Home() {
     const [postDetails, setPostDetails] = useState({});
     const [requestCount, setRequestCount] = useState(0);
     const [autoValue, setAutoValue] = useState(null);
-    const [housingOptions, setHousingOptions] = useState([
+    const housingOptions = [
         {name: 'Lark Chapel Hill', address: '602 M.L.K. Jr Blvd, Chapel Hill, NC 27514', price: ''},
         {name: 'Union Chapel Hill', address: '425 Hillsborough St, Chapel Hill, NC 27514', price: ''},
         {name: 'Shortbread Lofts', address: '333 W Rosemary St, Chapel Hill, NC 27516', price: ''},
@@ -39,7 +39,7 @@ function Home() {
         {name: 'Mill Creek Condominiums', address: '710 M.L.K. Jr Blvd, Chapel Hill, NC 27514', price: ''},
         {name: 'Chapel Ridge Apartments', address: '101 Legacy Terrace, Chapel Hill, NC 27516', price: ''},
         {name: 'Granville Towers', address: 'Granville Towers South Building, 2100, Chapel Hill, NC 27514', price: ''}
-    ]);
+    ];
 
     const [infoCard, setInfoCard] = useState({
         name: 'Select a housing option for more details',
