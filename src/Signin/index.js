@@ -1,9 +1,9 @@
 import {TextField, Button, Snackbar} from '@material-ui/core'
 import {Alert} from '@material-ui/lab'
-import { auth, db } from '../Firebase/firebase';
+import { auth } from '../Firebase/firebase';
 import { useState } from 'react';
 import './index.css'
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 
 function Signin() {
 
@@ -48,7 +48,7 @@ function Signin() {
 
         let emailAddress = email;
         auth.sendPasswordResetEmail(emailAddress).then(function() {
-            setSnackbar({status: true, message: 'Email sent to your email address.'});
+            setSnackbar({status: true, message: 'Check your email to change your password.'});
         }).catch(function(error) {
             setSnackbar({status: true, message: `${error.code} - ${error.message}`});
         });
@@ -69,7 +69,7 @@ function Signin() {
                         </div>
             
                         <div className='pwdInput'>
-                            <TextField fullWidth={true} placeholder='password' 
+                            <TextField type='password' fullWidth={true} placeholder='password' 
                                 required={true} variant='filled' onChange={handlePWD}>
                             </TextField>
                         </div>
@@ -78,12 +78,15 @@ function Signin() {
                     
                     <br></br>
                     <div className='signin-button'>
-                        <Button variant='contained' color='primary' onClick={handleSignIn}>Signin</Button>
+                        <Button variant='contained' color='primary' onClick={handleSignIn}>Sign in</Button>
                     </div>
                     <div className='reset-password'>
                         <Button variant='contained' color='secondary' onClick={handlePWDReset}>Reset Password</Button>
                     </div>
-                
+
+                    <div>
+                        <Link to='/signup'><Button>Need an account? Signup here.</Button></Link>
+                    </div>
                 </form>
                 <Snackbar open={snackbar.status} autoHideDuration={7500} onClose={() => setSnackbar({status: false})}> 
                     <Alert severity='info'>{snackbar.message}</Alert>

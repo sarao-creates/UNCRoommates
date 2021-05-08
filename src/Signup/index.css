@@ -55,3 +55,20 @@
 .tiktokInput {
     width: 32%;
 }
+
+.oauth-login {
+    margin-top: 10px;
+}
+
+.oauth-inline {
+    display: inline-block;
+}
+
+.second-button {
+    margin-left: 10px;
+}
+
+.oauth-second {
+    margin-top: 10px;
+}
+

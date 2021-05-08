@@ -1,7 +1,6 @@
 import {Button} from '@material-ui/core'
-import { ContactSupportOutlined } from '@material-ui/icons';
 import {useState, useEffect} from 'react';
-import {auth, db} from '../Firebase/firebase';
+import {db} from '../Firebase/firebase';
 
 function Request(props) {
     const [user, setUser] = useState()
@@ -24,7 +23,7 @@ function Request(props) {
         let docRef = db.collection('users').doc(props.cid);
         await docRef.get().then((doc) => {
             if (doc.exists) {
-                cgroup = doc.data().group == '' ? false : true;
+                cgroup = doc.data().group === '' ? false : true;
                 cgid = doc.data().group;
             }
         })
@@ -32,12 +31,13 @@ function Request(props) {
         docRef = db.collection('users').doc(props.rid);
         await docRef.get().then((doc) => {
             if (doc.exists) {
-                rgroup = doc.data().group == '' ? false : true;
+                rgroup = doc.data().group === '' ? false : true;
                 rgid = doc.data().group;
             }
         })
 
         let currentGroup = [];
+        let currentRequests = [];
 
         if (rgid === cgid) {
             console.log('Already roommates with this user!');
@@ -61,7 +61,7 @@ function Request(props) {
                 }
             })
             currentGroup.push(props.rid)
-            db.collection('groups').doc(rgid).update({
+            db.collection('groups').doc(cgid).update({
                 users: currentGroup,
             })
 
@@ -102,6 +102,25 @@ function Request(props) {
             });
            
         }
+
+        docRef = db.collection('users').doc(props.cid);
+        await docRef.get().then((doc) => {
+            if (doc.exists) {
+                currentRequests = doc.data().requests;
+            }
+        })
+        
+        for (let i = 0; i < currentRequests.length; i++) {
+            if (currentRequests[i] === props.rid) {
+                currentRequests.splice(i, 1);
+            }
+        }
+
+        db.collection('users').doc(props.cid).update({
+            requests: currentRequests,
+        })
+
+        props.handleClose()
     }
 
     const handleReject = () => {
@@ -109,7 +128,7 @@ function Request(props) {
     }
 
     return(
-        <div>
+        <div className='request-main'>
             <p>{user} wants to be roommates!</p>
             <Button color='primary' onClick={handleAccept}>Accept</Button>
             <Button color='secondary' onClick={handleReject}>Reject</Button>

@@ -7,15 +7,20 @@
 }
 .author {
     display: inline-block;
-    margin: 10px 0px;
+    margin-top: 10px;
+    margin-left: 15px;
     font-size: 20px;
 }
 
 .top-level {
     width: 100%;
+    margin-top: 10px;
 }
 
 .body {
     font-size: 17px;
 }
 
+.avatar {
+    display: inline-block;
+}

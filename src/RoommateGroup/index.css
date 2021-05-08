@@ -1,23 +1,9 @@
 .dashboard-main {
-    height: 100vh;
-    width: 100%;
-
-}
-
-.dashboard-div {
-    margin: 0 auto;
-    border: black solid 3px;
-    border-radius: 15px;
-    width: 70%;
-    height: 90%;
-}
-
-.dashboard-title {
-    text-align: center;
+    display: inline-block;
+    position: relative;
 }
 
 .map-main {
     width: 750px;
     height: 500px;
-    margin: 0 auto;
 }

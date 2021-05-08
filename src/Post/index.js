@@ -1,9 +1,18 @@
-import {Card, CardActionArea, CardActions, CardContent, Button, IconButton} from '@material-ui/core';
+import {Card, CardActionArea, CardContent, IconButton, Avatar} from '@material-ui/core';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import './index.css';
 import {db, auth} from '../Firebase/firebase.js';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 function Post(props) {
+
+    const useStyles = makeStyles((theme) => ({
+        blue: {
+            color: theme.palette.getContrastText('#81d4fa'),
+            backgroundColor: '#81d4fa',
+        }
+    }))
 
     const handleRequest = async () => {
         let user = auth.currentUser;
@@ -33,6 +42,7 @@ function Post(props) {
         })
     }
 
+    const classes = useStyles();
 
     return (
         <div className='post-main'>
@@ -41,6 +51,10 @@ function Post(props) {
                 <CardContent>
                     <div>
                         <div className='top-level'>
+                            <div className='avatar'>
+                                <Avatar className={classes.blue}>{props.postObj.author.substring(0,1)}{props.postObj.author.substring(1,2)}</Avatar>
+                            </div>
+                            
                             <h1 className='author'>{props.postObj.author}</h1>
                             <div className='roommate-request'>
                                 <IconButton>
@@ -54,10 +68,10 @@ function Post(props) {
                     <p className='body'>{props.postObj.body}</p>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
+            {/* <CardActions>
                 <Button size='small' color='primary'>Endorse {props.postObj.numberOfLikes}</Button>
                 <Button size='small' color='primary'>Comment {props.postObj.numberOfComments}</Button>
-            </CardActions>
+            </CardActions> */}
         </Card>
         </div>
     );

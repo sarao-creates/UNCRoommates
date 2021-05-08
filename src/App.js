@@ -2,12 +2,11 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import SignupComponent from './Signup';
 import SigninComponent from './Signin'
 import HomeComponent from './Home';
-import RoommateComponent from './RoommateGroup';
-
+import DonateComponent from './Donate';
 const SignupPath = '/signup';
 const SigninPath = '/signin';
 const HomePath = '/home';
-const RoommatePath = '/group';
+const DonationPath = '/donate';
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
       <Route path={SignupPath} component={SignupComponent}></Route>
       <Route path={SigninPath} component={SigninComponent}></Route>
       <Route path={HomePath} component={HomeComponent}></Route> 
-      <Route path={RoommatePath} component={RoommateComponent}></Route>
+      <Route path={DonationPath} component={DonateComponent}></Route>
     </Router>
   );
 }

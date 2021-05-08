@@ -13,8 +13,11 @@ const config = {
 };
 
 firebase.initializeApp(config);
+export const fb = firebase.auth
 
 export const db = firebase.firestore();
 export default db;
 
 export const auth = firebase.auth();
+
+
