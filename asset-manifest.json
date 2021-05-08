@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/UNCRoommates/static/css/main.4864594d.chunk.css",
+    "main.js": "/UNCRoommates/static/js/main.6d42a69a.chunk.js",
+    "main.js.map": "/UNCRoommates/static/js/main.6d42a69a.chunk.js.map",
+    "runtime-main.js": "/UNCRoommates/static/js/runtime-main.96dfe40f.js",
+    "runtime-main.js.map": "/UNCRoommates/static/js/runtime-main.96dfe40f.js.map",
+    "static/js/2.c1e12c51.chunk.js": "/UNCRoommates/static/js/2.c1e12c51.chunk.js",
+    "static/js/2.c1e12c51.chunk.js.map": "/UNCRoommates/static/js/2.c1e12c51.chunk.js.map",
+    "index.html": "/UNCRoommates/index.html",
+    "static/css/main.4864594d.chunk.css.map": "/UNCRoommates/static/css/main.4864594d.chunk.css.map",
+    "static/js/2.c1e12c51.chunk.js.LICENSE.txt": "/UNCRoommates/static/js/2.c1e12c51.chunk.js.LICENSE.txt",
+    "static/media/cridge.895d7f2a.jpeg": "/UNCRoommates/static/media/cridge.895d7f2a.jpeg",
+    "static/media/csquare.57377470.jpeg": "/UNCRoommates/static/media/csquare.57377470.jpeg",
+    "static/media/flat.49ba957b.svg": "/UNCRoommates/static/media/flat.49ba957b.svg",
+    "static/media/granville.401870d4.jpeg": "/UNCRoommates/static/media/granville.401870d4.jpeg",
+    "static/media/lark.85749eee.jpeg": "/UNCRoommates/static/media/lark.85749eee.jpeg",
+    "static/media/index.css": "/UNCRoommates/static/media/me.f3a589bb.png",
+    "static/media/millcreek.e325632b.jpeg": "/UNCRoommates/static/media/millcreek.e325632b.jpeg",
+    "static/media/shortbread.3f73a0ba.jpeg": "/UNCRoommates/static/media/shortbread.3f73a0ba.jpeg",
+    "static/media/unc.d47b3ec8.jpeg": "/UNCRoommates/static/media/unc.d47b3ec8.jpeg",
+    "static/media/union.524078c7.jpeg": "/UNCRoommates/static/media/union.524078c7.jpeg",
+    "static/media/univ.d167e847.jpeg": "/UNCRoommates/static/media/univ.d167e847.jpeg",
+    "static/media/warehouse.a99534fe.jpeg": "/UNCRoommates/static/media/warehouse.a99534fe.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.96dfe40f.js",
+    "static/js/2.c1e12c51.chunk.js",
+    "static/css/main.4864594d.chunk.css",
+    "static/js/main.6d42a69a.chunk.js"
+  ]
+}
