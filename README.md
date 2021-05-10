@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# UNC Roommates
+UNC Roommates is your one-stop destination for finding a roommate at UNC Chapel Hill!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Currently deployed at this domain: https://6096427c300c42f06256a91e--serene-liskov-010cf3.netlify.app/
 
-## Available Scripts
+## Features
+UNC Roommates has:
+* A feed of posts where you can find potential roommates or post looking for potential roommates
+* A housing dashboard that shows supported housing locations and their estimaated price and walking distance
+* Notifications and the ability to accept or reject roommate requests.
+* Donation feature
 
-In the project directory, you can run:
+## Project Inspirations
+I created UNC Roommates because two friends and I spent months trying to find a 4th roommate for our apartment in Chapel Hill. There just wasn't an obvious destination to go for meeting new people online (COVID-19) and especially those who were also looking for housing. The current system is to use Facebook Groups which are often unapparent and inactive. So I sought to create an easy-to-use, obvious destination for finding roommates. This is also my COMP 426 Final Project.
 
-### `npm start`
+## Technical Details
+UNC Roommates is created with ReactJS, Firebase, and Material-UI. It uses 3 APIs: [Google Maps API](https://developers.google.com/maps), [Google Maps Geocoding API](https://rapidapi.com/googlecloud/api/google-maps-geocoding), and [Quotes API by Martin Svoboda](https://rapidapi.com/martin.svoboda/api/quotes15).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ReactJS
+* Makes up the entire front-end of the website, including multiple components found in the src/ folder.
+* Contains the logic for the website
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Firebase
+* Used for authentication and back-end of website
+* Four OAuth providers: Google, Facebook, Twitter, and Github
 
-### `npm test`
+Material-UI
+* For beautiful components and styling
+* Autocomplete for housing options
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Attributions
+Thank you to:
+* [ReactJS and documentation](https://reactjs.org/docs/getting-started.html)
+* [Firebase and documentation](https://firebase.google.com/docs)
+* [Material-UI and documentation](https://material-ui.com/)
+* [COMP 426 for the project, KMP for teaching, and Chris Burgees for being a great TA](https://comp426.com/home)
+* [Computer Science + Social Good for teaching me the basics of React and Firebase through our CFTK project.](https://cssgunc.org/)
+* [Stripe + Google Pay for payment](https://stripe.com/)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Loved this project <3 hope to grow it out more
