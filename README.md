@@ -28,6 +28,9 @@ Material-UI
 * For beautiful components and styling
 * Autocomplete for housing options
 
+Axios
+* For HTTP requests
+
 ## Attributions
 Thank you to:
 * [ReactJS and documentation](https://reactjs.org/docs/getting-started.html)
